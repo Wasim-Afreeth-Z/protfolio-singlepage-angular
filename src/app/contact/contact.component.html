@@ -1,0 +1,124 @@
+<section class="contact-section" id="contact">
+    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+        <p class="contact">Contact</p>
+        <h3 class="contact-quote">I Want to Hear from You</h3>
+    </div>
+
+    <div class="contact-box flex justify-between mt-[75px]">
+        <!-- details -->
+        <div class="leftside" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out"
+            data-aos-delay="200">
+            <div class="flex flex-col gap-y-5">
+                <div class="flex items-center gap-x-5">
+                    <p
+                        class="icon text-[22px] w-[90px] h-[90px] flex items-center justify-center rounded-full bg-[#00c0ff] text-white">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </p>
+                    <div>
+                        <h2 class="text-[27px] text-white font-semibold">Location</h2>
+                        <p class="detail text-[#ffffff7a]">Karaikal, Puducherry</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-5">
+                    <p
+                        class="icon text-[22px]  w-[90px] h-[90px] flex items-center justify-center rounded-full bg-[#00c0ff] text-white">
+                        <i class="fa-solid fa-envelope"></i>
+                    </p>
+                    <div>
+                        <h2 class="text-[27px] text-white font-semibold">Email</h2>
+                        <div class="an"><a href="mailto:wasimafreeth36@gmail.com"
+                                class="hover:underline detail text-[#ffffff7a]">wasimafreeth36&#64;gmail.com</a></div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-5">
+                    <p
+                        class="icon text-[22px] w-[90px] h-[90px] flex items-center justify-center rounded-full bg-[#00c0ff] text-white">
+                        <i class="fa-solid fa-phone"></i>
+                    </p>
+                    <div>
+                        <h2 class="text-[27px] text-white font-semibold">Phone</h2>
+                        <div class="an"><a href="https://wa.me/919940943266"
+                                class="hover:underline detail text-[#ffffff7a]">+91-99404943266</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact form -->
+        <form class="rightside flex flex-col gap-y-3" [formGroup]="MessageForm" data-aos="zoom-in"
+            data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200" (ngSubmit)="MessageAndSubmit()">
+            <div class="box-1 flex gap-3">
+
+                <!-- name -->
+                <div class="name">
+                    <input
+                        class="w-[250px] text-white text-[18px] bg-transparent placeholder:text-[#ffffff7a] placeholder:text-[18px] border-[1px] border-[#ffffff7a] py-4 px-4 rounded-md outline-none"
+                        type="text" name="name" id="name" placeholder="Your Name" formControlName="name">
+                    <!-- || MessageForm.get('name')?.touched -->
+                    @if ((isSubmitted && MessageForm.get('name')?.invalid)|| MessageForm.get('name')?.touched)
+                    {
+                    @if(MessageForm.get('name')?.hasError('required')){
+                    <p class="text-red-600 mt-2 pl-2">Enter the Name</p>
+                    }
+                    }
+                </div>
+
+                <!-- email -->
+                <div class="email">
+                    <input
+                        class="w-[250px] text-white text-[18px] bg-transparent placeholder:text-[#ffffff7a] placeholder:text-[18px] border-[1px] border-[#ffffff7a] py-4 px-4 rounded-md outline-none"
+                        type="email" name="email" id="email" placeholder="Your Email" formControlName="email">
+
+                    @if ((isSubmitted && MessageForm.get('email')?.invalid)|| MessageForm.get('email')?.touched)
+                    {
+                    @if(MessageForm.get('email')?.hasError('required')){
+                    <p class="text-red-600 mt-2 pl-2">Enter the Email</p>
+                    }
+                    @if(MessageForm.get('email')?.hasError('email')){
+                    <p class="text-red-600 mt-2 pl-2">Enter correct Format Email</p>
+                    }
+                    }
+                </div>
+            </div>
+
+            <!-- subject -->
+            <div class="subject">
+                <input
+                    class="w-full text-white text-[18px] bg-transparent placeholder:text-[#ffffff7a] placeholder:text-[18px] border-[1px] border-[#ffffff7a] py-4 px-4 rounded-md outline-none"
+                    type="text" name="subject" id="subject" placeholder="Subject" formControlName="subject">
+                @if ((isSubmitted && MessageForm.get('subject')?.invalid)|| MessageForm.get('subject')?.touched)
+                {
+                @if(MessageForm.get('subject')?.hasError('required')){
+                <p class="text-red-600 mt-2 pl-2">Enter the Subject</p>
+                }
+                }
+            </div>
+
+
+            <!-- message -->
+            <div>
+                <textarea
+                    class="w-full h-[210px] text-white text-[18px] bg-transparent placeholder:text-[#ffffff7a] placeholder:text-[18px] border-[1px] border-[#ffffff7a] py-4 px-4 rounded-md outline-none"
+                    name="message" id="message" placeholder="Write Your message here"
+                    formControlName="message"></textarea>
+                @if ((isSubmitted && MessageForm.get('message')?.invalid)|| MessageForm.get('message')?.touched)
+                {
+                @if(MessageForm.get('message')?.hasError('required')){
+                <p class="text-red-600 mt-1 pl-2">Enter the Message</p>
+                }
+                }
+            </div>
+
+            <button
+                [disabled]="MessageForm.value.name===null || MessageForm.value.email===null ||MessageForm.value.subject===null ||MessageForm.value.message===null "
+                type="submit" class="flex justify-start">
+                <p class="connect"><span class="but">Send
+                        Message</span></p>
+            </button>
+        </form>
+    </div>
+
+    <footer class="flex justify-center py-[80px]" data-aos="zoom-in" data-aos-duration="1000"
+        data-aos-easing="ease-in-out" data-aos-delay="200">
+        <h1 class="text-[#ffffff7a]">Developed by <span class="text-white">Wasim Afreeth Z</span> © 2024</h1>
+    </footer>
+</section>

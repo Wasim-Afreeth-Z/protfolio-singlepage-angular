@@ -1,0 +1,54 @@
+<section class="projects-section-1" id="project-1">
+    <div (click)="close()" class="absolute right-7 top-5 text-[30px] text-gray-400 hover:text-red-600"><i
+            class="fa-solid fa-circle-x"></i></div>
+    <div class="projects-header">
+        <div class="projects-left">
+            <h1 class="projects-topic-2">{{data.project.title}}</h1>
+            <p class="stack">({{data.project.project_type}})</p>
+        </div>
+        <div class="projects-right">
+            <div class="projects-detail-box">
+                <h5 class="detail-topic">TECHNOLOGY</h5>
+                <p class="detail-data">{{data.project.technologys}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="img-box">
+        <img class="project-img" src={{data.project.image}} alt="">
+    </div>
+
+    <div class="about-project">
+        <div class="about-left">
+            <h3 class="about-topic">ABOUT THE PROJECT</h3>
+            <p class="about-para-1">{{data.project.sub_title}}</p>
+        </div>
+        <div class="about-right">
+            <p class="about-para-2">{{data.project.description}}</p>
+            <p class="github-link">Github Link:
+                @if (data.project.github_link!==null) {
+                <a class="project-link" href={{data.project.github_link}}>Click Here</a>
+                }
+                @if (data.project.github_link==="") {
+            <p class="text-[15px] text-red-500">Not Deployed</p>
+            }
+            @if(data.project.github_link===null) {
+            <p class="text-[15px] text-red-500">Not Deployed</p>
+            }
+            </p>
+            <p class="website-link">Website Link:
+                @if (data.project.website_link!==null && data.project.website_link.length>=1) {
+                <a class="project-link" href={{data.project.website_link}}>Click Here</a>
+                }
+                @if (data.project.website_link===" ") {
+            <p class="text-[15px] text-red-500">Not Deployed</p>
+            }
+            @if (data.project.website_link.length<=0) { <p class="text-[15px] text-red-500">Not Deployed</p>
+                }
+                @if(data.project.website_link===null) {
+                <p class="text-[15px] text-red-500">Not Deployed</p>
+                }
+                </p>
+        </div>
+    </div>
+</section>

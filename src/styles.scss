@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(/images/background.jpg);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    // overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media (min-width: 1450px) {
+    body {
+        width: 1700px;
+        margin-inline: auto;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #3a2b71;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00c0ff;
+    border-radius: 10px;
+}

@@ -1,0 +1,35 @@
+<nav>
+    <h1><span class="word-1">P</span>rotfolio<span class="word-1">.</span></h1>
+    <ul class="nav-bar">
+        <li routerLink="home" (click)="home()" routerLinkActive="active" class="hp home">Home</li>
+        <li routerLink="about" (click)="about()" routerLinkActive="active" class="p about">About</li>
+        <li routerLink="services" (click)="services()" routerLinkActive="active" class="p service">Services</li>
+        <li routerLink="skill" (click)="skill()" routerLinkActive="active" class="p skill">Skills</li>
+        <li routerLink="quali" (click)="quali()" routerLinkActive="active" class="p quali ">Qualification</li>
+        <li routerLink="project" (click)="project()" routerLinkActive="active" class="p project">My Projects</li>
+        <li routerLink="contact" (click)="contact()" routerLinkActive="active" class="p contact">Contact</li>
+        <span class="line">|</span>
+        <div class="icon">
+            <li><a href={{this.abouts?.linkedin_link}}><i class="fa fa-brands fa-linkedin"></i></a></li>
+            <li><a href={{this.abouts?.github_link}}><i class="fa fa-brands fa-github"></i></a></li>
+        </div>
+    </ul>
+    <div (click)="headerChange()" class="three-bar"><i class={{headerIcon}}></i></div>
+</nav>
+
+<!-- mobile drop down -->
+<div class="main-dropdown" [ngStyle]="{'transform':headerValue?' translateY(-150%)':' translateY(0%)'}">
+    <ul class="dropdown">
+        <li routerLink="home" (click)="home()" routerLinkActive="active" class="hm home">Home</li>
+        <li routerLink="about" (click)="about()" routerLinkActive="active" class="m about">About</li>
+        <li routerLink="services" (click)="services()" routerLinkActive="active" class="m service">Services</li>
+        <li routerLink="skill" (click)="skill()" routerLinkActive="active" class="m skill">Skills</li>
+        <li routerLink="quali" (click)="quali()" routerLinkActive="active" class="m quali ">Qualification</li>
+        <li routerLink="project" (click)="project()" routerLinkActive="active" class="m project">My Projects</li>
+        <li routerLink="contact" (click)="contact()" routerLinkActive="active" class="m contact">Contact</li>
+        <div class="icon">
+            <li><a href={{this.abouts?.linkedin_link}}><i class="fa fa-brands fa-linkedin"></i></a></li>
+            <li><a href={{this.abouts?.github_link}}><i class="fa fa-brands fa-github"></i></a></li>
+        </div>
+    </ul>
+</div>

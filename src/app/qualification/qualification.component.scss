@@ -1,0 +1,154 @@
+.qua-section {
+    padding-inline: 160px;
+    margin-bottom: 150px;
+}
+
+.qua {
+    font-size: 21px;
+    font-weight: 500;
+    color: #00c0ff;
+    text-align: center;
+}
+
+.qua-quote {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+.course{
+    h1{
+        line-height: 20px;
+    }
+}
+
+.university{
+    line-height: 20px;
+}
+
+@media (min-width: 1700px) {
+    .qua {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .qua-section {
+        padding-inline: 100px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .qua-section {
+        padding-inline: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .qua-section {
+        padding-inline: 40px;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .qua-quote {
+        font-size: 30px;
+    }
+
+    .edu {
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 660px) {
+    .course {
+        flex-direction: column;
+        align-items: start;
+        p {
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .qua-section {
+        padding-inline: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .qua-quote {
+        font-size: 25px;
+    }
+
+    .edu {
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course {
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .university {
+        font-size: 18px;
+    }
+
+    .mark {
+        font-size: 14px;
+    }
+
+    .icon {
+        padding-inline: 18px;
+        padding-block: 14px;
+        font-size: 24px;
+        left: -33px;
+    }
+
+    .box {
+        padding-left: 50px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .qua-quote {
+        font-size: 17px;
+    }
+
+    .edu {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 370px) {
+    .course {
+        h1 {
+            font-size: 17px;
+        }
+    }
+
+    .university {
+        font-size: 15px;
+    }
+
+    .box {
+        padding-left: 50px;
+    }
+}

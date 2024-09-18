@@ -1,0 +1,142 @@
+.service-section {
+    padding-inline: 160px;
+    margin-bottom: 150px;
+}
+
+.service-boxes {
+    display: flex;
+    flex-basis: 30%;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service {
+    font-size: 21px;
+    font-weight: 500;
+    color: #00c0ff;
+    text-align: center;
+}
+
+.service-quote {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+
+.service-box {
+    background-color: #3a2b71;
+    color: white;
+    padding-inline: 40px;
+    padding-block: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+}
+
+.icon2 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    color: #00c0ff;
+}
+
+.topic {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-wrap: nowrap;
+}
+
+.disc {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.493);
+    line-height: 28px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+@media (min-width: 1700px) {
+    .service {
+        font-size: 30px;
+    }
+
+    .topic {
+        font-size: 28px;
+    }
+
+    .disc {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 1450px) {
+    // .section-one {
+    //     width: 1700px;
+    //     margin-inline: auto;
+    // }
+    .service-box{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .service-section {
+        padding-inline: 100px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .service-section {
+        padding-inline: 70px;
+    }
+
+    .service-boxes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-box {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .service-section {
+        padding-inline: 40px;
+    }
+}
+
+@media (max-width: 805px) {
+    .service-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    .service-quote {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-section {
+        padding-inline: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .service-quote {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .service-box {
+        padding-inline: 30px;
+        padding-block: 30px;
+    }
+}

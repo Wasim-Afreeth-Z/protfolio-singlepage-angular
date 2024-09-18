@@ -1,0 +1,26 @@
+<main id="home">
+    <!-- Name & image -->
+    <section class="section-one" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out"
+        data-aos-delay="200">
+        <div class="leftside">
+            <h1 class="name text-nowrap">Wasim <span class="lastname">Afreeth Z</span></h1>
+            <p class="role">FullStack Developer</p>
+            <a href="#" class="connect"><span class="but">Get Connected</span> </a>
+        </div>
+        <div class="rightside">
+            <div class="img-box"><img class="person" src="images/person/person.jpg" alt="img"></div>
+        </div>
+    </section>
+
+    <!-- softskill -->
+    <section class="section-two" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out"
+        data-aos-delay="200">
+        @for (softskill of softskills; track $index) {
+        <div class="softskill">
+            <div class="icon2"><i class={{softskill.icon}}></i></div>
+            <p class="topic">{{softskill.skillname}}</p>
+            <p class="disc">{{softskill.description}}</p>
+        </div>
+        }
+    </section>
+</main>

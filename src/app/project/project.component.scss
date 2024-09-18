@@ -1,0 +1,99 @@
+.project-section {
+    padding-inline: 160px;
+    margin-bottom: 150px;
+}
+
+.project {
+    font-size: 21px;
+    font-weight: 500;
+    color: #00c0ff;
+    text-align: center;
+}
+
+.project-quote {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 1700px) {
+    .project {
+        font-size: 30px;
+    }
+}
+@media (min-width: 1600px) {
+    img {
+        width: 600px;
+        height: 300px ;
+    }
+}
+
+@media (max-width: 1250px) {
+    .project-section {
+        padding-inline: 100px;
+    }
+}
+
+@media (max-width: 1347px) {
+    img {
+        width: 400px;
+        height: 200px;
+    }
+    // .link-box{
+    //     padding: 12px;
+    //     p{
+    //         font-size: 12px;
+    //     }
+    //     a{
+    //         font-size: 10px;
+    //     }
+    // }
+}
+
+@media (max-width: 1150px) {
+    .project-section {
+        padding-inline: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .project-section {
+        padding-inline: 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    .project-quote {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-section {
+        padding-inline: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .project-quote {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .project-quote {
+        font-size: 18px;
+    }
+    .link-box{
+        padding: 10px;
+        h1{
+            font-size: 13px;
+        }
+        button{
+            padding-inline: 5px;
+            padding-block:2px;
+        }
+    }
+}

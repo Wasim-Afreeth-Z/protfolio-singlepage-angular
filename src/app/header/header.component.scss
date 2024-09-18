@@ -1,0 +1,152 @@
+nav {
+    background-color: #1e1345;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 14px;
+    padding-inline: 160px;
+    z-index: 50;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-100%);
+}
+
+nav.scrolled {
+    transform: translateY(0%);
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+.word-1 {
+    color: #00c0ff
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.hp,
+.p {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    margin-right: 30px;
+
+}
+
+.hp:hover,
+.p:hover {
+    color: #00c0ff
+}
+
+.line {
+    color: white;
+    margin-right: 20px;
+}
+
+.icon {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.fa:hover {
+    color: #00c0ff
+}
+
+.three-bar,
+.main-dropdown {
+    display: none;
+}
+
+
+@media (max-width: 1250px) {
+    nav {
+        padding-inline: 100px;
+    }
+}
+
+@media (max-width: 1150px) {
+    nav {
+        padding-inline: 70px;
+    }
+}
+
+@media (max-width: 1070px) {  //1024px
+    nav {
+        padding-inline: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding-inline: 20px;
+    }
+}
+
+@media (max-width: 1015px) {
+
+    // mobile
+    .main-dropdown {
+        display: block;
+        position: fixed;
+        top: 59px;
+        right: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+        z-index: 40;
+    }
+
+    .dropdown {
+        background-color: #1e1345;
+        color: white;
+        font-weight: 400;
+        padding-inline: 40px;
+        padding-block: 15px;
+
+        li {
+            padding-bottom: 10px;
+        }
+
+        li:hover {
+            color: #00c0ff
+        }
+    }
+
+
+    .nav-bar {
+        display: none;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        padding-block: 10px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+    }
+
+    .three-bar {
+        display: block;
+        color: white;
+        font-size: 25px;
+    }
+}
+.active{
+    color: #00c0ff;
+}

@@ -1,0 +1,48 @@
+<section class="skill-section" id="skill">
+    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+        <p class="skill">Skills</p>
+        <h3 class="skill-quote">I Work Hard to Improve My Skills <br> Regularly</h3>
+    </div>
+    <div class="skill-all-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"
+        data-aos-delay="400">
+        @for (technicalskill of technicalskills; track $index) {
+        <div class="skill-box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+            data-aos-delay="400">
+            <img class="skill-img" src={{technicalskill.skillimage}} alt="">
+            <p class="skill-name">{{technicalskill.skillname}}</p>
+        </div>
+        }
+        <!-- <div class="skill-box">
+            <img class="skill-img" src="images/skill/css.svg" alt="">
+            <p class="skill-name">CSS</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img " src="images/skill/tailwind-css.svg" alt="">
+            <p class="skill-name">Tailwind</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img" src="images/skill/javascript.svg" alt="">
+            <p class="skill-name">JS</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img" src="images/skill/angular.svg" alt="">
+            <p class="skill-name">Angular</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img" src="images/skill/node-js.svg" alt="">
+            <p class="skill-name">NodeJS</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img" src="images/skill/express-js.svg" alt="">
+            <p class="skill-name">ExpressJS</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img" src="images/skill/mysql.svg" alt="">
+            <p class="skill-name">MySQL</p>
+        </div>
+        <div class="skill-box">
+            <img class="skill-img" src="images/skill/mongodb.svg" alt="">
+            <p class="skill-name">MongoDB</p>
+        </div> -->
+    </div>
+</section>

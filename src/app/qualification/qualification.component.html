@@ -1,0 +1,23 @@
+<section class="qua-section" id="quali">
+    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+        <p class="qua">Qualification</p>
+        <h3 class="qua-quote">My Education Details &<br> Qualification</h3>
+    </div>
+    <p class="edu text-4xl text-white font-semibold text-center mt-14 mb-10">Education</p>
+    <div class=" flex flex-col justify-center items-center">
+        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+            @for (education of educations; track $index) {
+            <div class="box relative flex flex-col gap-y-3 border-l-[1px] border-[#ffffff7a] pl-16 pb-16 ml-[38px]">
+                <div class="course flex items-center gap-x-5">
+                    <h1 class="text-2xl text-white font-semibold text-wrap">{{education.degreeORcourse}}</h1>
+                    <p class="text-[#ffffff7a]">({{education.year}})</p>
+                </div>
+                <p class="university text-wrap text-white font-medium text-xl">{{education.institution}}</p>
+                <p class="mark text-[#ffffff7a]">CGPA - {{education.cgpa}}</p>
+                <p class="icon absolute left-[-38px] text-[28px] rounded-full px-5 py-4 text-white bg-[#00c0ff]"><i
+                        class="fa-solid fa-graduation-cap"></i></p>
+            </div>
+            }
+        </div>
+    </div>
+</section>

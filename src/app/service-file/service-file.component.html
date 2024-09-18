@@ -1,0 +1,16 @@
+<section class="service-section" id="services">
+    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+        <p class="service">Services</p>
+        <h3 class="service-quote">What I Do for My Clients</h3>
+    </div>
+    <div class="service-boxes" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+    data-aos-delay="400">
+        @for (service of services; track $index) {
+        <div class="service-box">
+            <div class="icon2"><i class={{service.icon}}></i></div>
+            <p class="topic">{{service.title}}</p>
+            <p class="disc">{{service.description}}</p>
+        </div>
+        }
+    </div>
+</section>
