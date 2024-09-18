@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import Aos from 'aos';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -32,5 +33,9 @@ export class HomeComponent {
       description: "Creativity involves the ability to think outside the box and come up with ideas that challenge assumptions. "
     }
   ];
+
+  contact() {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
 }
