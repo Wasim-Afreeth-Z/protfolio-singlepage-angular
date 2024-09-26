@@ -32,7 +32,7 @@ export class ProjectComponent {
       technologys: "HTML, CSS, JavaScript, Angular, NodeJS, ExpreJS, MySQL",
       description: "Developed a full-stack E-commerce platform with user authentication, cart management, search, and filtering features. Implemented an admin panel for product and order management & main admin can manage users, admin and overall products. Tech Stack: HTML, CSS, Tailwind CSS, Angular, Node.js, Express.js, MySQL.",
       github_link: "https://github.com/Wasim-Afreeth-Z/E-commerce-Website-Frontend",
-      website_link: ""
+      website_link: "https://e-commerce-website-fullstack.netlify.app"
     },
     {
       title: "Electronic Bill Apps",
