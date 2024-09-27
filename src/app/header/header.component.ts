@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { CommanService } from '../../Services/comman.service';
-import { AuthService } from '../../Services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +12,7 @@ import { AuthService } from '../../Services/auth.service';
 export class HeaderComponent {
 
   // inject
-  commanService = inject(CommanService)
-  authService = inject(AuthService)
   route = inject(Router)
-
-  abouts: any;
 
   ngOnInit() {
     const header = document.querySelector("nav")
@@ -31,8 +25,6 @@ export class HeaderComponent {
         this.headerIcon = "fa fa-bars"
       }
     })
-
-    this.DisplayAboutDetails()
   }
 
   headerIcon: string = "fa fa-bars"
@@ -78,17 +70,5 @@ export class HeaderComponent {
     document.getElementById('quali')?.scrollIntoView({ behavior: 'smooth' })
     this.headerValue = true
     this.headerIcon = "fa fa-bars"
-  }
-
-  // show data from database
-  DisplayAboutDetails(): void {
-    this.commanService.DisplayAboutDetails().subscribe({
-      next: (data: any) => {
-        // console.log(data);
-        const response = this.authService.decryptData({ data: data })
-        this.abouts = response
-        // console.log(response);
-      }
-    })
   }
 }

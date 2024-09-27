@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import Aos from 'aos';
-import { CommanService } from '../../Services/comman.service';
-import { AuthService } from '../../Services/auth.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MessageSendedComponent } from '../message-sended/message-sended.component';
 import { CommonModule } from '@angular/common';
+import emailjs from '@emailjs/browser';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -20,9 +20,8 @@ export class ContactComponent {
 
   // inject
   formBuilder = inject(FormBuilder)
-  commanService = inject(CommanService)
-  authService = inject(AuthService)
   dialog = inject(MatDialog)
+  snackBar = inject(MatSnackBar)
 
   ngOnInit() {
     this.MessageForm = this.formBuilder.group({
@@ -36,16 +35,33 @@ export class ContactComponent {
     Aos.refresh();//refresh method is called on window resize and so on, as it doesn't require to build new store with AOS elements and should be as light as possible.
   }
 
-  // // send the data to admin service file
+  //Emailjs
+  //!npm i @emailjs/browser 
   SendMessage(): void {
-        const dialog = this.dialog.open(MessageSendedComponent, {
-          width: '600px',
-          // height: '93%',
-          // position: {
-          //   top: '20px'
-          // },
-        })
-        this.clearForm()
+    if (this.MessageForm.value.name !== null || this.MessageForm.value.email !== null || this.MessageForm.value.subject !== null || this.MessageForm.value.message !== null) {
+      emailjs.init("GNNyoI12Q80AAG3rF")
+      emailjs.send("service_vpi8oyd", "template_8yx9ytz", {
+        subject: this.MessageForm.value.subject,
+        to_name: "Wasim",
+        from_name: this.MessageForm.value.name,
+        from_email: this.MessageForm.value.email,
+        message: this.MessageForm.value.message,
+      });
+      const dialog = this.dialog.open(MessageSendedComponent, {
+        width: '600px',
+        // height: '93%',
+        // position: {
+        //   top: '20px'
+        // },
+      })
+      this.clearForm()
+    } else {
+      this.snackBar.open('All the field was required', 'Error', {
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+        duration: 3000,
+      });
+    }
   }
 
   clearForm() {
